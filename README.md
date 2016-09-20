@@ -1,5 +1,8 @@
 # atom-rst-preview-docutils package
 
-A short description of your package.
+An atom package which allows to preview restructured text documents with the python docutils library (original implementation of rst).
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+Requires `language-restructuredtext` (atom package) and docutils (either installed by your package manager or by `pip install docutils`).
+
+
+Disclaimer: The package is highly based on the [markdown-preview](https://github.com/atom/markdown-preview/) package.
