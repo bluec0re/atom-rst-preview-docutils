@@ -1,7 +1,7 @@
 {
   "name": "atom-rst-preview-docutils",
   "main": "./lib/atom-rst-preview-docutils",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A preview using the original RestructuredText docutils implementation.\nRequires the docutils python package and language-restructuredtext",
   "repository": "https://github.com/bluec0re/atom-rst-preview-docutils",
   "keywords": [
@@ -13,7 +13,6 @@
   "activationCommands": {
     "atom-workspace": "atom-rst-preview-docutils:toggle"
   },
-  "repository": "https://github.com/bluec0re/atom-rst-preview-docutils",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
@@ -24,8 +23,8 @@
     "fs-plus": "^2.9.1",
     "highlights": "^1.4.1",
     "underscore-plus": "^1.6.6"
-},
-"deserializers": {
+  },
+  "deserializers": {
     "RestructeredTextPreviewView": "createRestructeredTextPreviewView"
   },
   "configSchema": {
@@ -47,19 +46,19 @@
         "text.plain",
         "text.plain.null-grammar"
       ],
-    "description": "List of scopes for languages for which previewing is enabled. See [this README](https://github.com/atom/spell-check#spell-check-package-) for more information on finding the correct scope for a specific language."
+      "description": "List of scopes for languages for which previewing is enabled. See [this README](https://github.com/atom/spell-check#spell-check-package-) for more information on finding the correct scope for a specific language."
     },
     "arguments": {
-        "type": "array",
-        "default": [
-          "--embed-stylesheet"
-        ],
-        "description": "List of arguments which are provided to the rst2html call."
+      "type": "array",
+      "default": [
+        "--embed-stylesheet"
+      ],
+      "description": "List of arguments which are provided to the rst2html call."
     },
     "rst2html": {
-        "type": "string",
-        "default": "rst2html",
-        "description": "Path to the rst2html script"
+      "type": "string",
+      "default": "rst2html",
+      "description": "Path to the rst2html script"
     }
   }
 }
