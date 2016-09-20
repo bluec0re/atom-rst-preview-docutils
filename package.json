@@ -1,7 +1,7 @@
 {
   "name": "atom-rst-preview-docutils",
   "main": "./lib/atom-rst-preview-docutils",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A preview using the original RestructuredText docutils implementation.\nRequires the docutils python package and language-restructuredtext",
   "repository": "https://github.com/bluec0re/atom-rst-preview-docutils",
   "keywords": [
