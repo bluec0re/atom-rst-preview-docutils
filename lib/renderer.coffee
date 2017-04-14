@@ -37,16 +37,19 @@ render = (text, filePath, callback) ->
   console.log(path.dirname(filePath))
   command = atom.config.get 'atom-rst-preview-docutils.rst2html'
   args = atom.config.get 'atom-rst-preview-docutils.arguments'
+  buffer = ''
   stdout = (html) ->
-    html = sanitize(html)
-    html = resolveImagePaths(html, filePath)
-    callback(null, html.trim())
+    buffer = buffer + html
   stderr = (error) ->
     #callback(error)
+  exit = (code) ->
+    html = sanitize(buffer)
+    html = resolveImagePaths(html, filePath)
+    callback(null, buffer)
   options =
     cwd: path.dirname(filePath)
   p = new BufferedProcess({
-    command, args, options, stdout, stderr
+    command, args, options, stdout, stderr, exit
   })
   p.process.stdin.end(text)
 
